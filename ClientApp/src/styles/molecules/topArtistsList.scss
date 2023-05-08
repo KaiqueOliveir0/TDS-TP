@@ -1,0 +1,35 @@
+﻿.artist-card {
+  max-width: 30rem;
+  width: 100%;
+
+  &-container {
+    display: flex;
+    margin: 5rem 0 0 0;
+
+    .position {
+      font-size: 5rem;
+      margin: unset;
+      text-align: left;
+    }
+  }
+
+  .artist-image {
+    height: 20rem;
+  }
+}
+
+.top-artists-list {
+  width: 100%;
+}
+
+@media screen and (min-width: 960px) {
+  .artist-card {
+    &-container {
+      .position {
+        font-size: 8rem;
+        margin: auto 1rem auto auto;
+        text-align: right;
+      }
+    }
+  }
+}

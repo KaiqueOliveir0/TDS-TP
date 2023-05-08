@@ -1,0 +1,31 @@
+﻿.profile-card {
+  display: flex;
+  flex-direction: column;
+  margin: 5rem 0 0 0;
+
+  .profile-image {
+    margin: -5rem auto 0;
+    height: 10rem;
+    width: 10rem;
+    &--skeleton {
+      left: 50%;
+      mix-blend-mode: hard-light;
+      position: absolute;
+      transform: translate(-50%);
+      z-index: 1;
+    }
+  }
+  
+  .feature-profile-data {
+    margin: 2rem 0 0;
+    .profile-url{
+      line-break: anywhere;
+    }
+  }
+  
+  .logout-btn {
+    width: 30%;
+    min-width: 5rem;
+    margin: 3rem auto;
+  }
+}

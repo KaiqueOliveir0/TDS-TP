@@ -1,0 +1,16 @@
+﻿#privacy {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  
+  .content{
+    margin: 3rem 0 0 0;
+  }
+  
+  .back-button{
+    display: flex;
+    margin: 5rem 0 0 0;
+    justify-content: center;
+  }
+}

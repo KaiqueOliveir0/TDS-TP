@@ -1,0 +1,41 @@
+﻿.game-card {
+  border-radius: 1rem;
+  //box-shadow: 3px 3px black;
+  height: 17rem;
+  width: 10rem;
+
+  backface-visibility: hidden;
+  position: relative;
+  transition: transform 1s;
+  transform: rotateY(-25deg);
+  transform-style: preserve-3d;
+  
+  &__face {
+    border-radius: 1rem;
+    color: white;
+    font-weight: bold;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    
+    &--back {
+      background-image: url('/cards/marselha/back.webp');
+    }
+    
+    &--front {
+      background-size: cover;
+      background-position: center;
+      transform: rotateY(180deg);
+      //background: red;
+    }
+  }
+  
+  &.reveal {
+    transform: rotateY(180deg);
+  }
+}
+
+.game-card-container {
+  margin-left: -7rem;
+  perspective: 50rem;
+}

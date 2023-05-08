@@ -1,0 +1,44 @@
+﻿header {
+  height: $header_height;
+
+  .side-menu-btn {
+    display: unset;
+  }
+  
+  .app-title {
+    margin: 0 2rem 0 0;
+  }
+
+  .login-logout-btn {
+    margin: 0 0 0 auto;
+  }
+  
+  .pages {
+    display: none;
+  }
+
+  @media screen and (min-width: 960px) {
+    .side-menu-btn {
+      display: none;
+    }
+
+    .pages {
+      display: unset;
+    }
+  }
+}
+
+.MuiToolbar-regular {
+  height: 100%;
+}
+
+.side-menu {
+  min-width: 15rem;
+  width: 40%;
+  
+  &--app-title {
+    align-items: center;
+    display: flex;
+    margin: 1rem !important;
+  }
+}

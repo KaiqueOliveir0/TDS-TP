@@ -1,0 +1,23 @@
+﻿.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.color-red {
+  color: darken($color-red, .5)
+}

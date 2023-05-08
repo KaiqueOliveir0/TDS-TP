@@ -1,0 +1,55 @@
+﻿.track-card {
+  max-width: 30rem;
+  width: 100%;
+
+  &-container {
+    display: flex;
+    margin: 5rem 0 0 0;
+
+    .position {
+      font-size: 5rem;
+      margin: unset;
+      text-align: left;
+    }
+    
+    &__grid {
+      justify-content: center;
+    }
+  }
+  
+  &--top {
+    display: flex;
+    margin: 1rem 0 0 1rem;
+
+    &-text {
+      margin: 0 1rem 0;
+      width: 100%;
+    }
+
+    .track-image {
+      height: 10rem;
+      min-width: 10rem;
+      width: 10rem;
+    }
+  }
+}
+
+.top-tracks-list {
+  width: 100%;
+}
+
+@media screen and (min-width: 960px) {
+  .track-card {
+    &-container {
+      .position {
+        font-size: 8rem;
+        margin: auto 1rem auto auto;
+        text-align: right;
+      }
+
+      &__grid {
+        justify-content: unset;
+      }
+    }
+  }
+}

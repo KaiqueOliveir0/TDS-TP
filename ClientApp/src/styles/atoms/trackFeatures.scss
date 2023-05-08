@@ -1,0 +1,25 @@
+﻿.track-features {
+  display: flex;
+  margin: 3rem 0 0;
+  
+  &__grid {
+    justify-content: center;
+  }
+  
+  &--gauges {
+    
+  }
+  
+  &--feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem 0 0 0 !important;
+  }
+
+  @media screen and (min-width: 960px) {
+    &--gauges {
+      justify-content: unset;
+    }
+  }
+}

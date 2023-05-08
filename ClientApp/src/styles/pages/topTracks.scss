@@ -1,0 +1,41 @@
+﻿#top_tracks {
+  .description {
+    text-align: center;
+  }
+  
+  .period {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0 0 0;
+    &--title {
+      
+    }
+    
+    &--chip {
+      margin: 0 0 0 1.3rem;
+    }
+  }
+}
+
+@media screen and (min-width: 960px) {
+  #top_tracks {
+    .description {
+      text-align: left;
+    }
+
+    .period {
+      display: block;
+      flex-direction: column;
+      align-items: center;
+      margin: 1rem 0 0 0;
+      &--title {
+        margin: 0 0 0 9rem;
+      }
+
+      &--chip {
+        margin: 0 1.3rem 0 0;
+      }
+    }
+  }
+}

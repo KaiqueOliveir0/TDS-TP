@@ -1,0 +1,27 @@
+﻿.feature-gauge {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  &__percentage {
+    font-size: 1rem !important;
+  }
+  
+  &__circle {
+    &--background {
+      color: $color-grey-very-dark !important;
+      position: absolute;
+    }
+  }
+  
+  &__label {
+    margin: 1rem 0 0 !important;
+    text-align: center;
+  }
+  
+  .MuiCircularProgress-circleDeterminate {
+    transition-duration: 1200ms;
+    transition-property: color, stroke-dashoffset;
+    transition-timing-function: cubic-bezier(.48,.11,.44,1.21);
+  }
+}

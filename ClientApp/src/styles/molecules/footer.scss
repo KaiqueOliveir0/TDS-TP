@@ -1,0 +1,16 @@
+﻿footer {
+  bottom: 0;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+  .bullet-symbol {
+    margin: 0 .3rem;
+  }
+
+  @media screen and (min-width: 960px) {
+    justify-content: unset;
+  }
+}

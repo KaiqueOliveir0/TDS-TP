@@ -1,0 +1,46 @@
+﻿#now_playing {
+  .resume-and-controls {
+    position: unset;
+    margin: 3rem 0 0 0;
+    
+    .title {
+      text-align: center;
+    }
+
+    .description {
+      text-align: center;
+    }
+    
+    .message {
+      display: flex;
+      align-items: center;
+      margin: 3rem 0 0;
+      padding: 1rem;
+      
+      &__text {
+        padding: 1rem;
+      }
+      
+      &__icon {
+        margin: 1rem;
+      }
+    }
+  }
+  
+  .who-are-you-card {
+    margin: 6rem auto;
+    max-width: 25rem;
+  }
+  
+  @media screen and (min-width: 960px) {
+    .resume-and-controls {
+      .title {
+        text-align: left;
+      }
+      
+      .description {
+        text-align: left;
+      }
+    }
+  }
+}

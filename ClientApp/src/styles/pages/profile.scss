@@ -1,0 +1,21 @@
+﻿#profile {
+  height: calc(100vh - #{$header_height});
+  display: flex;
+  flex-direction: column;
+  margin: 3rem 0 5rem;
+  
+  .content{
+    margin: 3rem 0 0 0;
+  }
+  
+  .back-button {
+    display: flex;
+    margin: 5rem 0 0 0;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 960px) {
+    justify-content: center;
+    margin: unset;
+  }
+}

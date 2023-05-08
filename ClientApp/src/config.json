@@ -1,0 +1,9 @@
+﻿{
+  "AppTitle": "Into Spotify",
+  "Spotify": {
+    "ClientId": "1bc5dbb564f1463fb495faed5c621dea",
+    "RedirectUriA": "https://intospotify.com/check",
+    "RedirectUri": "https://localhost:5001/check",
+    "Scopes": "user-read-private user-top-read user-read-playback-state"
+  }
+}

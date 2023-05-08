@@ -1,0 +1,107 @@
+﻿@import 'utils/colors';
+@import 'utils/quickFixes';
+@import 'utils/variables';
+@import 'atoms/trackFeatures';
+@import 'atoms/featureGauge';
+@import 'atoms/gameCard';
+@import 'atoms/playingStatus';
+@import 'molecules/check';
+@import 'molecules/header';
+@import 'molecules/footer';
+@import 'molecules/stage';
+@import 'molecules/profileCard';
+@import 'molecules/topArtistsList';
+@import 'molecules/topTracksList';
+//@import 'molecules/topSongsList';
+@import 'pages/home';
+@import 'pages/nowPlaying';
+@import 'pages/privacy';
+@import 'pages/profile';
+@import 'pages/topArtists';
+@import 'pages/topTracks';
+
+body {
+  margin: 0;
+  //font-family: Roboto;
+  a {
+    text-decoration: none;
+  }
+}
+
+.header-padding {
+  height: $header_height;
+}
+
+.resume-and-controls {
+  margin: 3rem 0 0;
+  position: static;
+}
+
+.preview {
+  position: relative;
+  &--list {
+    filter: blur(15px);
+    height: calc(100vh - #{$header_height});
+    overflow-y: hidden;
+    user-select: none;
+  }
+  
+  &--lead {
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 80%;
+    max-width: 25rem;
+    position: absolute;
+  }
+}
+
+.login-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem 0 0 0;
+
+  &--button {
+    width: fit-content;
+  }
+
+  &--privacy-reminder {
+    margin: 1rem 0 0 0 !important;
+  }
+}
+
+.end-of-list {
+  display: flex;
+  justify-content: center;
+  margin: 6rem 0;
+  
+  p {
+    margin: 0 0 0 1rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .resume-and-controls {
+    position: fixed;
+  }
+  
+  .preview {
+    position: relative;
+    &--list {
+      filter: blur(15px);
+      height: calc(100vh - #{$header_height});
+      overflow-y: hidden;
+      user-select: none;
+    }
+
+    &--lead {
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      width: unset;
+      position: absolute;
+    }
+  }
+}
