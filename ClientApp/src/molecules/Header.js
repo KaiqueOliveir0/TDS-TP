@@ -1,9 +1,7 @@
 ﻿import React, {useState} from 'react';
 import {AppBar, Toolbar, Typography, Button, Icon} from "@material-ui/core";
-import makeStyles from "@material-ui/core/styles/makeStyles";
 import config from "./../config.json"
 import {Link} from "react-router-dom";
-import {Logout} from "../utils/auth";
 import Drawer from "@material-ui/core/Drawer";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
@@ -12,23 +10,8 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import IconButton from "@material-ui/core/IconButton";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  }
-}));
-
 export default function Header(props) {
-  const classes = useStyles();
   const [isSideMenuOpen, setSideMenuOpen] = useState(false);
-  const f_Logout = () => {
-    Logout();
-    props.setAuthenticated(false);
-  }
-  
   const v_Pages = [
     {
       label: 'Home',
@@ -70,9 +53,6 @@ export default function Header(props) {
             )
           }
         </div>
-        {/*<Link to="/dashboard">*/}
-        {/*  <Button color="inherit">Dashboard</Button>*/}
-        {/*</Link>*/}
         {
           props.isAuthenticated &&
           <Link className="login-logout-btn" to="/profile">

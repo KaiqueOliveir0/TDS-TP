@@ -1,13 +1,12 @@
 import React from 'react';
 import Header from './molecules/Header'
-import Footer from './molecules/Footer'
-import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from "@material-ui/styles";
 import CssBaseline from '@material-ui/core/CssBaseline';
 import './styles/main.scss'
 import {brown, lightGreen} from "@material-ui/core/colors";
+import { createTheme } from '@material-ui/core/styles'
 
-const m_Theme = createMuiTheme({
+const m_Theme = createTheme({
   palette: {
     type: 'dark',
     primary: {
