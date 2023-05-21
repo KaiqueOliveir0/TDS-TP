@@ -1,7 +1,4 @@
-﻿import ReactDOM from "react-dom";
-import {MemoryRouter} from "react-router-dom";
-import App from "../App";
-import React from "react";
+﻿import React from "react";
 import Header from "./Header";
 import Enzyme, { shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
