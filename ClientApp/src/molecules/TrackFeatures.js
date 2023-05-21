@@ -179,17 +179,19 @@ export function TrackFeatures(props) {
   // }, [chartContainer]);
 
   return (
-    <div className="track-features">
-      {
-        data &&
-        <Grid container className="track-features track-features--gauges track-features__grid" spacing={8}>
-          {data.features.map((item, index) => <FeatureGauge key={index} label={item.label} value={item.value} color={item.color} />)}
-          <FeatureGauge key={100} label="Key" value={pitchClassToTotal[data.key] ?? 'N/A'} color={pink[500]} absoluteValue nonNumeric />
-          <FeatureGauge key={101} label="BPM" value={data.tempo} color={pink[500]} absoluteValue />
-        </Grid>
-      }
-      {/*<Typography variant="body1">BPM: {data?.tempo}</Typography>*/}
-    </div>
-  );
+  <div className="track-features">
+    {data && data.tempo >= 0 && data.features.every(item => item.value >= 0) ? (
+      <Grid container className="track-features track-features--gauges track-features__grid" spacing={8}>
+        {data.features.filter(item => item.value >= 0).map((item, index) => (
+          <FeatureGauge key={index} label={item.label} value={item.value} color={item.color} />
+        ))}
+        <FeatureGauge key={100} label="Key" value={pitchClassToTotal[data.key] ?? 'N/A'} color={pink[500]} absoluteValue nonNumeric />
+        <FeatureGauge key={101} label="BPM" value={data.tempo} color={pink[500]} absoluteValue />
+      </Grid>
+    ) : null}
+    {/*<Typography variant="body1">BPM: {data?.tempo}</Typography>*/}
+  </div>
+);
+
 }
 
