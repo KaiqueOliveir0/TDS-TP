@@ -1,20 +1,13 @@
 ﻿import React, {useEffect, useState} from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import Skeleton from '@material-ui/lab/Skeleton';
 import axios from 'axios';
 import {Logout, Token} from '../utils/auth'
 import {Avatar, Icon} from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
 import {red} from "@material-ui/core/colors"
-import { createMuiTheme, withStyles, ThemeProvider } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 
 export default function ProfileCard(props) {
   const [loading, setLoading] = useState(true);
