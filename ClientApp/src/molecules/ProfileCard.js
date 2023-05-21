@@ -56,26 +56,26 @@ export default function ProfileCard(props) {
       error ? 'ERROR' : 
         <Paper className="profile-card">
           <Avatar alt="Profile picture" className="profile-image" src={loading ? undefined : response.images[0]?.url}/>
-          <Typography align="center" variant="h3">{response.display_name}</Typography>
-          <Grid container>
-            <Grid item xs={12} md={6} className="feature-profile-data">
+          <Typography id="profile_display_name" align="center" variant="h3">{response.display_name}</Typography>
+          <Grid id="profile_data" container>
+            <Grid id="followers_column" item xs={12} md={6} className="feature-profile-data">
               <Typography variant="h6" align="center">Seguidores</Typography>
               <Typography variant="body1" align="center">{response.followers?.total}</Typography>
             </Grid>
-            <Grid item xs={12} md={6} className="feature-profile-data">
+            <Grid id="subscription_type_column" item xs={12} md={6} className="feature-profile-data">
               <Typography variant="h6" align="center">Tipo de assinatura</Typography>
               <Typography className="capitalize" variant="body1" align="center">{response.product}</Typography>
             </Grid>
-            <Grid item xs={12} md={6} className="feature-profile-data">
+            <Grid id="country_column" item xs={12} md={6} className="feature-profile-data">
               <Typography variant="h6" align="center">País</Typography>
               <Typography variant="body1" align="center">{response.country}</Typography>
             </Grid>
-            <Grid item xs={12} md={6} className="feature-profile-data">
+            <Grid id="url_column" item xs={12} md={6} className="feature-profile-data">
               <Typography variant="h6" align="center">URL do perfil</Typography>
               <Typography variant="body1" align="center" className="profile-url">{response.external_urls?.spotify}</Typography>
             </Grid>
           </Grid>
-          <ColorButton disabled={loading} className="logout-btn" color="error.main" variant="contained" startIcon={<Icon>meeting_room</Icon>} onClick={() => f_LogOut()}>Sair</ColorButton>
+          <ColorButton id="logout_btn" disabled={loading} className="logout-btn" color="error.main" variant="contained" startIcon={<Icon>meeting_room</Icon>} onClick={() => f_LogOut()}>Sair</ColorButton>
         </Paper>
       }
     </div>
