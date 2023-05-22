@@ -25,7 +25,6 @@ it('TrackFeatures component with no demo prop', async () => {
     expect(wrapper.find('.track-features--gauges')).toHaveLength(0);
 });
 
-
 it('TrackFeatures component with a features prop', async () => {
     const wrapper = shallow(<TrackFeatures features={[{ label: 'Acousticness', value: 0.5, color: 'red' }]} />);
     expect(wrapper).toHaveLength(1);
@@ -64,5 +63,16 @@ it('TrackFeatures component with negative data prop and valid tempo prop', async
 it('TrackFeatures component with just data prop', async () => {
     const wrapper = shallow(<TrackFeatures features={[{ label: 'Acousticness', value: 1, color: 'red' }]}/>);
     expect(wrapper.find('.track-features--gauges')).toHaveLength(0);
+});
+
+it('renders with valid data and tempo', () => {
+    const features = [
+      { label: 'Acousticness', value: 0.5, color: 'red' },
+      { label: 'Liveness', value: 0.8, color: 'blue' },
+      { label: 'Danceability', value: 0.3, color: 'green' },
+    ];
+    const tempo = 120;
+    const wrapper = shallow(<TrackFeatures features={features} tempo={tempo} />);
+    expect(wrapper.find('.track-features--gauges')).toHaveLength(1);
 });
 
