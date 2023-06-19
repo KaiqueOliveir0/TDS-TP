@@ -50,7 +50,7 @@
     "test": "cross-env CI=true react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint": "eslint ./src/",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "cross-env CI=true react-scripts test --env=jsdom --coverage"
   },
   "browserslist": {
     "production": [
