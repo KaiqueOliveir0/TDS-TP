@@ -49,7 +49,8 @@
     "build": "set \"GENERATE_SOURCEMAP=false\" && react-scripts build",
     "test": "cross-env CI=true react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "lint": "eslint ./src/"
+    "lint": "eslint ./src/",
+    "test:coverage": "jest --coverage"
   },
   "browserslist": {
     "production": [
