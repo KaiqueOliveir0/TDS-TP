@@ -26,13 +26,16 @@ jobs:
           npm i
           npm test
 
-  codecov:
+    codecov:
     name: Codecov
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install
 
       - name: Change directory to ClientApp
         run: cd ClientApp
