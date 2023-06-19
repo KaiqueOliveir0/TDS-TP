@@ -7,8 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-
-codecov:
+  codecov:
     name: Codecov
     runs-on: ubuntu-latest
 
@@ -18,7 +17,7 @@ codecov:
 
       - name: Upload coverage report to Codecov
         uses: codecov/codecov-action@v3.1.4
-        
+
   build_test:
     runs-on: ubuntu-latest
 
@@ -37,5 +36,3 @@ codecov:
           cd ClientApp
           npm i
           npm test
-
-  
