@@ -62,4 +62,52 @@ describe('App component', () => {
       });
       expect(nowPlayingPageElement).toBeInTheDocument();
     });
+    
+    it('should navigate to the Top Artists page', () => {
+        render(
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        );
+    
+        // Click on the "Now playing" button
+        const topArtistsButton = screen.getByRole('button', {
+            name: /top artists/i,
+          });
+          fireEvent.click(topArtistsButton);
+    
+        // Check if the Now Playing page component is rendered
+        const topArtistsPageElement = screen.getByText((content, element) => {
+            // Customize the search to find the text within the desired element
+            return (
+              element.classList.contains('MuiTypography-h1') &&
+              content.startsWith('Top Artists')
+            );
+          });
+          expect(topArtistsPageElement).toBeInTheDocument();
+        });
+    
+    it('should navigate to the Top Tracks page', () => {
+        render(
+            <BrowserRouter>
+            <App />
+            </BrowserRouter>
+        );
+    
+        // Click on the "Now playing" button
+        const topTracksButton = screen.getByRole('button', {
+            name: /top tracks/i,
+            });
+            fireEvent.click(topTracksButton);
+    
+        // Check if the Now Playing page component is rendered
+        const topTracksPageElement = screen.getByText((content, element) => {
+            // Customize the search to find the text within the desired element
+            return (
+                element.classList.contains('MuiTypography-h1') &&
+                content.startsWith('Top Tracks')
+            );
+            });
+            expect(topTracksPageElement).toBeInTheDocument();
+        });
 });
