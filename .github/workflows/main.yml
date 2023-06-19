@@ -31,6 +31,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Change directory to ClientApp
+        run: cd ClientApp
+
+      - name: Install dependencies
+        run: npm install
+
       - name: Run tests with coverage
         run: npm run test:coverage
 
