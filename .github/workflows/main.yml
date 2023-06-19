@@ -26,22 +26,11 @@ jobs:
           npm i
           npm test
 
-name: Codecov
-
-on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
-
-jobs:
   codecov:
+    name: Codecov
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Run tests with coverage
         run: npm run test:coverage
 
